@@ -30,8 +30,6 @@ for (let allCalls of callButton) {
 
     const totalCurrentCoin = Number(coinButton.innerText);
 
-    
-
     if (totalCurrentCoin < 20) {
       alert("A minimum of 20 coins is required to make a call.");
       return;
@@ -39,6 +37,36 @@ for (let allCalls of callButton) {
 
     const newAmountCoin = totalCurrentCoin - 20;
     coinButton.innerText = newAmountCoin;
+
+    const callHistory = getElement("call-history");
+
+    const callCard = document.createElement("div");
+
+    callCard.setAttribute(
+      "class",
+      "flex justify-between items-center p-4 bg-[#fafafa] rounded-lg mt-2"
+    );
+
+    callCard.innerHTML = `
     
+               <div>
+                  <h1 class="font-bold text-lg font-sans">
+                    ${cardName}
+                  </h1>
+                  <p class="text-[#5C5C5C] text-lg">${cardNum}</p>
+                </div>
+
+                <div>
+                  <p class="text-lg font-sans">4.56.89 Am</p>
+                </div>
+
+    `;
+    callHistory.append(callCard);
+  });
+
+  getElement("btn-clears").addEventListener("click", function(){
+    const callHistory = getElement("call-history");
+    callHistory.innerHTML =""
   })
 }
+
