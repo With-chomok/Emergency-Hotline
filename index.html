@@ -43,14 +43,14 @@
         </div>
         <div
           class="flex md:justify-start justify-center items-center mt-2 md:m-3 gap-3 md:gap-[20px]">
-          <button
+          <button 
             class="px-5 py-3 bg-[#41ff6b1a] rounded-[50px] flex justify-center items-center gap-1.5 min-w-[110px]">
-            <p  class="font-bold"><span id="increase-heart">0</span></p>
-            <i  class="fa-solid fa-heart  text-[#ED1C24]"></i>
+            <p class="font-bold"><span id="increase-heart">0</span></p>
+            <i class="fa-solid fa-heart text-[#ED1C24]"></i>
           </button>
           <button
             class="px-5 py-3 bg-[#41ff6b1a] rounded-[50px] flex justify-center items-center gap-1.5 min-w-[110px]">
-            <p class="font-bold">100</p>
+            <p id="coin-button" class="font-bold">100</p>
             <img src="./assets/coin.png" class="object-cover h-5 w-5" />
           </button>
 
@@ -81,9 +81,9 @@
       <!-- card section  -->
       <div class="w-11/12 mx-auto grid md:grid-cols-12 sm:grid-cols-1 gap-2">
         <div class="grid md:grid-cols-3 md:col-span-9 gap-5 my-12">
-          
+
           <!-- 1 -->
-          <div class="items-stretch">
+          <div id="card" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -92,12 +92,16 @@
                   class="bg-[#FFE3E2] w-14 h-14 rounded-2xl flex justify-center items-center">
                   <img class="w-8 h-8" src="./assets/emergency.png" />
                 </div>
-                <i id="heart-icon" class="fa-regular fa-heart heart-icons text-[#5C5C5C] "></i>
+                <i
+                  id="heart-icon"
+                  class="fa-regular fa-heart heart-icons text-[#5C5C5C]"></i>
               </div>
 
               <!-- text div  -->
               <div class="items-start text-start my-auto">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1
+                  id="card-title"
+                  class="text-2xl sm:font-semibold md:font-bold card-name">
                   National Emergency Number
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">National Emergency</p>
@@ -105,8 +109,10 @@
 
               <!-- contact div  -->
 
-              <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">999</h1>
+              <div id="card-num" class="items-start mb-6">
+                <h1 class="text-3xl sm:font-semibold md:font-bold card-number">
+                  999
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   All
@@ -114,21 +120,20 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
             </div>
           </div>
           <!-- 2 -->
-
-          <div class="items-stretch">
+          <div id="card" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -142,7 +147,9 @@
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1
+                  id="card-title"
+                  class="text-2xl sm:font-semibold md:font-bold card-name">
                   Police Helpline Number
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Police</p>
@@ -151,7 +158,11 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">999</h1>
+                <h1
+                  id="card-num"
+                  class="text-3xl sm:font-semibold md:font-bold card-number">
+                  999
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   Police
@@ -159,13 +170,13 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
@@ -173,7 +184,7 @@
           </div>
           <!-- 3 -->
 
-          <div class="items-stretch">
+          <div id="card" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -187,7 +198,9 @@
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1
+                  id="card-title"
+                  class="text-2xl sm:font-semibold md:font-bold card-name">
                   Fire Service Number
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Fire Service</p>
@@ -196,7 +209,11 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">999</h1>
+                <h1
+                  id="card-title"
+                  class="text-3xl sm:font-semibold md:font-bold card-number">
+                  999
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   Fire
@@ -204,13 +221,13 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
@@ -218,7 +235,7 @@
           </div>
           <!-- 4 -->
 
-          <div class="items-stretch">
+          <div id="card-4" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -232,7 +249,7 @@
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1 class="text-2xl sm:font-semibold md:font-bold card-name">
                   Ambulance Service
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Ambulance</p>
@@ -241,7 +258,7 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">
+                <h1 class="text-3xl sm:font-semibold md:font-bold card-number">
                   1994-999999
                 </h1>
                 <button
@@ -251,13 +268,13 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
@@ -265,7 +282,7 @@
           </div>
           <!-- 5 -->
 
-          <div class="items-stretch">
+          <div id="card-5" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -279,7 +296,7 @@
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1 class="text-2xl sm:font-semibold md:font-bold card-name">
                   Women & Child Helpline
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Women & Child Helpline</p>
@@ -288,7 +305,9 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">109</h1>
+                <h1 class="text-3xl sm:font-semibold md:font-bold card-number">
+                  109
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   Help
@@ -296,13 +315,13 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
@@ -310,7 +329,7 @@
           </div>
           <!-- 6 -->
 
-          <div class="items-stretch">
+          <div id="card-6" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -324,7 +343,7 @@
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1 class="text-2xl sm:font-semibold md:font-bold card-name">
                   Anti-Corruption Helpline
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Anti-Corruption</p>
@@ -333,7 +352,9 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">106</h1>
+                <h1 class="text-3xl sm:font-semibold md:font-bold card-number">
+                  106
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   Govt.
@@ -341,13 +362,13 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
@@ -355,7 +376,7 @@
           </div>
           <!-- 7 -->
 
-          <div class="items-stretch">
+          <div id="card-7" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -364,12 +385,12 @@
                   class="bg-[#FFE3E2] w-14 h-14 rounded-2xl flex justify-center items-center">
                   <img class="w-8 h-8" src="./assets/emergency.png" />
                 </div>
-                <i class=" heart-icons fa-regular fa-heart text-[#5C5C5C]"></i>
+                <i class="heart-icons fa-regular fa-heart text-[#5C5C5C]"></i>
               </div>
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1 class="text-2xl sm:font-semibold md:font-bold card-name">
                   Electricity Helpline
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Electricity Outage</p>
@@ -378,7 +399,9 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold9lo">16216</h1>
+                <h1 class="text-3xl sm:font-semibold md:font-bold card-number">
+                  16216
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   Electricity
@@ -386,13 +409,13 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
@@ -400,7 +423,7 @@
           </div>
           <!-- 8 -->
 
-          <div class="items-stretch">
+          <div id="card-8" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -414,7 +437,7 @@
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1 class="text-2xl sm:font-semibold md:font-bold card-name">
                   Brac Helpline
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Brac</p>
@@ -423,7 +446,9 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">16445</h1>
+                <h1 class="text-3xl sm:font-semibold md:font-bold card-number">
+                  16445
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   NGO
@@ -431,13 +456,13 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
@@ -445,7 +470,7 @@
           </div>
           <!-- 9 -->
 
-          <div class="items-stretch">
+          <div id="card-9" class="items-stretch cards">
             <div
               class="p-8 bg-base-100 shadow-md rounded-xl h-full flex flex-col justify-between">
               <!-- img div  -->
@@ -459,7 +484,7 @@
 
               <!-- text div  -->
               <div class="items-start text-start mb-4">
-                <h1 class="text-2xl sm:font-semibold md:font-bold">
+                <h1 class="text-2xl sm:font-semibold md:font-bold card-name">
                   Bangladesh Railway Helpline
                 </h1>
                 <p class="text-lg text-[#5C5C5C]">Bangladesh Railway</p>
@@ -468,7 +493,9 @@
               <!-- contact div  -->
 
               <div class="items-start mb-6">
-                <h1 class="text-3xl sm:font-semibold md:font-bold">163</h1>
+                <h1 class="text-3xl sm:font-semibold md:font-bold card-number">
+                  163
+                </h1>
                 <button
                   class="text-[#5C5C5C] bg-[#F2F2F2] text-lg rounded-3xl py-2 px-4">
                   Travel
@@ -476,18 +503,19 @@
               </div>
 
               <!-- button section  -->
-              <div class="flex gap-2">
+              <div class="flex gap-2 card-btton">
                 <button
                   class="btn rounded-lg border-[#D4D6D5] bg-white w-1/2 text-[#5C5C5C] text-base">
                   <i class="fa-regular fa-copy"></i>Copy
                 </button>
                 <button
-                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2">
+                  class="btn bg-[#00A63E] text-base text-white rounded-lg w-1/2 call-button">
                   <i class="fa fa-phone"></i>Call
                 </button>
               </div>
             </div>
           </div>
+
         </div>
 
         <aside
@@ -509,7 +537,7 @@
                 </button>
               </div>
             </div>
-`
+            `
             <!-- call history  -->
             <div class="space-y-3 mx-6 md:mx-0">
               <div
@@ -567,13 +595,11 @@
                   <p class="text-lg font-sans">4.56.89 Am</p>
                 </div>
               </div>
-
             </div>
           </div>
         </aside>
       </div>
     </main>
-
 
     <script src="./index.js"></script>
   </body>
