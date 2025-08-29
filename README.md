@@ -1,4 +1,4 @@
-#What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+##What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 Answer: 
 
 ```getElementById```
@@ -21,25 +21,25 @@ Answer:
 
 
 
-#How do you create and insert a new element into the DOM?
+##How do you create and insert a new element into the DOM?
 
 using document.createElement() method for new element create like: 
 
  ```const createDiv = document.createElement("div");```
 
- #insert this new element  in html or parentChild -using appendChild method like------
+ ##insert this new element  in html or parentChild -using appendChild method like------
   
  ``` const parentDiv = document.getElementById("parentDiv")```
  
 ```parentDiv = appendChild("createDiv")```
 
-#What is Event Bubbling and how does it work?
+##What is Event Bubbling and how does it work?
 
 Event Bubbling is how DOM events work – they start at what I clicked and go up to the parent elements in the DOM tree.
 This functionality allows parent elements to monitor events initiated by their child elements.
 
 
-#What is Event Delegation in JavaScript? Why is it useful?
+##What is Event Delegation in JavaScript? Why is it useful?
 
 Event Delegation is an javascript technic for add eventListener without looping.
 Its doing light weight code and and avoid multiple event listener. 
