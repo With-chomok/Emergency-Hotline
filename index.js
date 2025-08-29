@@ -6,7 +6,7 @@ function getElement(id) {
 
 let heartIcon = document.getElementsByClassName("heart-icons");
 for (let allHeartIcon of heartIcon) {
-  const heartIcons = allHeartIcon.addEventListener("click", function () {
+ allHeartIcon.addEventListener("click", function () {
     const increaseHeart = getElement("increase-heart").innerText;
     let totalHeart = Number(increaseHeart) + 1;
     getElement("increase-heart").innerText = Number(totalHeart);
@@ -44,20 +44,20 @@ for (let allCalls of callButton) {
 
     callCard.setAttribute(
       "class",
-      "flex justify-between items-center p-4 bg-[#fafafa] rounded-lg mt-2"
+      "flex justify-between items-center p-4 bg-[#fafafa] rounded-lg mt-4 space-y-2"
     );
 
     callCard.innerHTML = `
     
                <div>
-                  <h1 class="font-bold text-lg font-sans">
+                  <h1 class="font-bold text-lg font-sans block">
                     ${cardName}
                   </h1>
                   <p class="text-[#5C5C5C] text-lg">${cardNum}</p>
                 </div>
 
                 <div>
-                  <p class="text-lg font-sans">4.56.89 Am</p>
+                  <p class="text-lg font-sans">${new Date().toLocaleTimeString()}</p>
                 </div>
 
     `;
@@ -68,5 +68,36 @@ for (let allCalls of callButton) {
     const callHistory = getElement("call-history");
     callHistory.innerHTML =""
   })
+  
+  
 }
+// challange section in number copy---(opied on click)
+
+
+const copyBtn = document.querySelectorAll(".copy-button");
+
+for(let btns of copyBtn){
+
+  btns.addEventListener("click", function(){
+    
+    let copyNum = btns.closest(".cards").querySelector(".card-number").innerText.trim();
+      navigator.clipboard.writeText(copyNum).then(() => {
+        alert(`Hotline Number is copied: ${copyNum}  `)
+  
+        
+        const copyCountEl = document.getElementById("copy-count");
+        const copyCount = Number(copyCountEl.innerText);
+        let increaseCopy = copyCount + 1;
+        
+        copyCountEl.innerText = increaseCopy;
+      })
+  
+  
+})
+}
+
+
+
+
+
 
