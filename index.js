@@ -6,7 +6,7 @@ function getElement(id) {
 
 let heartIcon = document.getElementsByClassName("heart-icons");
 for (let allHeartIcon of heartIcon) {
- allHeartIcon.addEventListener("click", function () {
+  allHeartIcon.addEventListener("click", function () {
     const increaseHeart = getElement("increase-heart").innerText;
     let totalHeart = Number(increaseHeart) + 1;
     getElement("increase-heart").innerText = Number(totalHeart);
@@ -17,14 +17,9 @@ const callButton = document.getElementsByClassName("call-button");
 
 for (let allCalls of callButton) {
   allCalls.addEventListener("click", function () {
-    const card = allCalls.closest(".cards");
 
-    const cardName = card.querySelector(".card-name").innerText.trim();
-    const cardNum = card.querySelector(".card-number").innerText.trim();
 
-    alert(`Service Name: ${cardName}\nService Number: ${cardNum}`);
-
-    // coin reduce after each click
+   // coin reduce after each click
 
     const coinButton = getElement("coin-button");
 
@@ -34,6 +29,15 @@ for (let allCalls of callButton) {
       alert("A minimum of 20 coins is required to make a call.");
       return;
     }
+
+    const card = allCalls.closest(".cards");
+
+    const cardName = card.querySelector(".card-name").innerText.trim();
+    const cardNum = card.querySelector(".card-number").innerText.trim();
+
+    alert(`Service Name: ${cardName}\n Service Number: ${cardNum}`);
+
+ 
 
     const newAmountCoin = totalCurrentCoin - 20;
     coinButton.innerText = newAmountCoin;
@@ -64,40 +68,29 @@ for (let allCalls of callButton) {
     callHistory.append(callCard);
   });
 
-  getElement("btn-clears").addEventListener("click", function(){
+  getElement("btn-clears").addEventListener("click", function () {
     const callHistory = getElement("call-history");
-    callHistory.innerHTML =""
-  })
-  
-  
+    callHistory.innerHTML = "";
+  });
 }
 // challange section in number copy---(opied on click)
 
-
 const copyBtn = document.querySelectorAll(".copy-button");
 
-for(let btns of copyBtn){
+for (let btns of copyBtn) {
+  btns.addEventListener("click", function () {
+    let copyNum = btns
+      .closest(".cards")
+      .querySelector(".card-number")
+      .innerText.trim();
+    navigator.clipboard.writeText(copyNum).then(() => {
+      alert(`Hotline Number is copied: ${copyNum}  `);
 
-  btns.addEventListener("click", function(){
-    
-    let copyNum = btns.closest(".cards").querySelector(".card-number").innerText.trim();
-      navigator.clipboard.writeText(copyNum).then(() => {
-        alert(`Hotline Number is copied: ${copyNum}  `)
-  
-        
-        const copyCountEl = document.getElementById("copy-count");
-        const copyCount = Number(copyCountEl.innerText);
-        let increaseCopy = copyCount + 1;
-        
-        copyCountEl.innerText = increaseCopy;
-      })
-  
-  
-})
+      const copyCountEl = document.getElementById("copy-count");
+      const copyCount = Number(copyCountEl.innerText);
+      let increaseCopy = copyCount + 1;
+
+      copyCountEl.innerText = increaseCopy;
+    });
+  });
 }
-
-
-
-
-
-
